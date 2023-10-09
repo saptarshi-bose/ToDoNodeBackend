@@ -45,6 +45,8 @@ On success, Proper Confirmation will be sent as response.
 
 On success, proper message and token will be returned.
 
+All APIs Down below requires the jwt Token which was returned after successfully login. Add Authorization in Header with "Bearer ${token}".
+
 3. To Add a item to TodoList: Method: Post
    http://localhost:5001/todos/ with payload like {
    "todoText": "My first ToDo Item"
