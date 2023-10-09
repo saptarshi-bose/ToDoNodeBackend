@@ -41,8 +41,8 @@ export const userLogin:RequestHandler = async(req, res, next) => {
             }else return res.status(403).json({message:"Invalid Password!"}); // password doesn't match
         }else return res.status(400).json({error: "Invalid Data Received"}); //Invalid Data is received in body
     }catch(err){
-        console.log("Unable to create new User", err);
-        return res.status(400).json({error: "Unable to create new User"});
+        console.log("User Login failed", err);
+        return res.status(400).json({error: "User Login failed"});
     }
 };
 

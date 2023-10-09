@@ -26,4 +26,5 @@ export const TodoMap = (sequelize: Sequelize) => {
         tableName: 'todos',
         timestamps: false
     });
+    Todo.sync({alter: true});
 }

@@ -1,5 +1,4 @@
 import { Model, Sequelize, DataTypes } from 'sequelize';
-import Todo from './todos';
 export default class User extends Model {
     public id?: number;
     public username!: string;
@@ -23,4 +22,5 @@ export const UserMap = (sequelize: Sequelize) => {
         tableName: 'users',
         timestamps: false
     });
+    User.sync({alter: true});
 }
